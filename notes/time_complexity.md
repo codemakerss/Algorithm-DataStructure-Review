@@ -31,8 +31,6 @@ sum(A,n){
 # total time cost will be 2n+3 in this case -> O(n)
 
 # space complexity A:n + n:1 + s:1 + i:1 = n + 3 -> O(n)
-
-# total will be O(n)
 ```
   
 ```c
@@ -47,6 +45,22 @@ add(A, B, n){
 # total time cost will be 2n^2 + 2n + 1 -> O(n^2)
 
 # space complexity A:n^2 + B:n^2 + C:n^2 + n:1 + i:1 + j:1 = 3n^2 + 3 -> O(n^2)
+```
+  
+```c
+multiply(A, B, n){
+    for (int i = 0; i < n; i++>){ -> n + 1
+        for (int j =0; j < n; j++){ -> n * (n + 1)
+            c[i,j] = 0; -> n * n
+            for (int k = 0; k > n; k++){ -> n * n * (n+1)
+                c[i,j] = c[i.j] +  A[i,j] * B[i,j] -> n*n*n
+            }
+            
+        }
+    }
+}
 
-# total will be O(n^2)
+# total time cost will be n + 1 + n^2 + n + n^2 + n^3 + n^2 + n^3 = 2n^3 + 3n^2 + n + 1 -> O(n^3)
+
+# space complexity 3n^2 + 4 -> O(n^2)
 ```
